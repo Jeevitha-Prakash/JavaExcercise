@@ -23,6 +23,7 @@ public class Palindrome
 
     public static void main(String[] args)
     {
+        //Initializing scanner class
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter thE String");
         String word =  sc.nextLine();
