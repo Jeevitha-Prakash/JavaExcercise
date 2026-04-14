@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Palindrome
 {
 
-    public static boolean palindrome(String word)
+    /* public static boolean palindrome(String word)
     {
         //Normalize the string
         // Remove non-alphanumeric characters and convert to lowercase
@@ -20,6 +20,26 @@ public class Palindrome
 
         return rev.equals(word);
     }
+*/
+
+    public static boolean palindrome1(String word)
+    {
+        //convert word to Lowercase
+        word = word.toLowerCase();
+
+        int i=0, j=word.length()-1;
+        while(i<j)
+        {
+            if(word.charAt(i)!=word.charAt(j))
+            {
+                return false;
+            }
+            i++;
+            j--;
+        }
+        return true;
+
+    }
 
     public static void main(String[] args)
     {
@@ -28,7 +48,8 @@ public class Palindrome
         System.out.println("Enter thE String");
         String word =  sc.nextLine();
 
-       boolean result =  palindrome(word);
+       //boolean result =  palindrome(word);
+        boolean result = palindrome1(word);
         if(result)
         {
             System.out.println("Palindrome");
